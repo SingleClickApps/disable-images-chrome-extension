@@ -1,0 +1,33 @@
+{	"name"					: "Images ON/OFF"
+, 	"version"				: "1.0.0"
+,	"minimum_chrome_version": "16.0"
+,	"manifest_version"		: 2
+,	"homepage_url"			: "http://singleclickapps.com/images-on-off"
+,	"description"			: "Disable images on current site."
+
+,	"icons"					:
+		{ "16"				: "icon.png"
+		, "48"				: "icon-48.png"
+		, "128"				: "icon-128.png"
+		}
+
+,	"permissions"			:
+		[ "tabs"
+		, "contentSettings"
+		, "contextMenus"
+		, "debugger"
+		, "browsingData"
+		]
+
+,	"browser_action"		:
+		{ "default_icon"	: "icon.png"
+		, "default_title" : "Images On/Off"
+		}
+
+,	"incognito"				: "spanning"
+,	"background"			: 
+		{ "page": "background.html"
+		}
+,	"options_page"			: "options.html"
+}
+
