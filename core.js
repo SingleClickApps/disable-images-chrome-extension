@@ -8,6 +8,7 @@
 
 var prefs;
 var contextMenuId = null;
+var contextMenuIdForToggle = null;
 
 var chromeContentSettings = chrome.contentSettings;
 /* currently (chrome 16), infobars is not implemented (only experimental...) */
@@ -268,6 +269,12 @@ function getVersion() {
 }
 
 function toggleContextMenu() {
+    contextMenuIdForToggle = chrome.contextMenus.create({
+        "title" : "Toggle Images",
+                           "type" : "normal",
+                           "contexts" : ["all"],
+                           "onclick" : changeSettings
+    });
 
 	if (prefs.showContextMenu && !contextMenuId) {
 		
