@@ -291,7 +291,7 @@ function toggleContextMenu() {
 
 function openImgPanel() {
 	return function(info, tab) {
-		chrome.tabs.create({"url":"chrome://chrome/settings/contentExceptions#images", "selected":true});
+		chrome.tabs.create({"url":"chrome://settings/content/images", "selected":true});
 	};
 }
 
